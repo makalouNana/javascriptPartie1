@@ -1,0 +1,310 @@
+/*******************************************************/
+Exercice 1
+
+Debut
+    n:entier
+    Faire
+         Saisir("Veillez entrer un nombre compris entre 10 et 20",n)
+         Si n < 10 
+            Afficer("Plus rand")
+         Sinon Si n > 20 Alors
+            Afficer("Plus petit")
+    Tant que (n < 10 OU n > 20)
+Fin
+
+/*************************************/
+
+EXERCICE 2
+
+Debut
+    n:entier
+    Saisir("Veillez entrer un nombre compris entre 10 et 20",n)
+    Pour(i allant de 1 à 10 pas de 1) Faire
+        Afficer(n+i /n)
+    Fin Pour    
+Fin
+
+/**********************************/
+EXERCICE 3
+
+Debut
+    n:entier
+    Saisir("Le nombre de la table que vous voulez Afficer",n)
+        Pour(i allant de 1 à 10 pas de 1) Faire
+            Afficer(n,"*"i,"=" n*i)
+        Fin Pour 
+Fin
+
+
+/**********************************/
+
+Exercice 4
+
+Debut
+    n,somme:entier
+    somme <- 0
+    Saisir("Le nombre de la table que vous voulez Afficer",n)
+        Pour(i allant de 1 à n pas de 1) Faire
+            somme <- i + somme
+        Fin Pour 
+        Afficer(somme)
+Fin
+
+
+/*********************************/
+
+Exercice 5
+
+Debut
+    n,factoriel:entier
+    factoriel <- 1
+    Saisir("Donner le nombre dont vous voulez calculer le factoriel",n)
+        Pour(i allant de 1 à n-1 pas de 1) Faire
+            factoriel <- i*factoriel
+        Fin Pour 
+        Afficer(factoriel)
+Fin
+
+
+/*********************************************/
+
+EXERCICE 6
+
+Debut
+    n,Plus:entier
+    Plus <- 0
+    
+        Pour(i allant de 1 à 20 pas de 1) Faire
+            Afficer("Entrez le nombre numéro",i)
+            Saisir(n)
+            Si n > Plus Alors
+                Plus <- n    
+        Fin Pour 
+        Afficer("Le plus rand est ",Plus)
+Fin
+
+
+
+/*********************************/
+
+EXERCICE 7
+
+Debut
+    n,Plus:entier
+    Plus <- 0
+    
+        Pour(i allant de 1 à 20 pas de 1) Faire
+            Afficer("Entrez le nombre numéro",i)
+            Saisir(n)
+            Si n > Plus Alors
+                Plus <- n  
+                position <- i  
+        Fin Pour 
+        Afficer("Le plus rand est ",Plus "et se trouve à la " , position "position")
+Fin
+
+/********************************************/
+
+EXERCICE 8
+
+Debut
+    n,Plus:entier
+    Plus <- 0
+    
+        Pour(i allant de 1 à 20 pas de 1) Faire
+            Afficer("Entrez le nombre numéro",i)
+            Saisir(n)
+            Si n > Plus Alors
+                Plus <- n  
+            Sinon Si n==0
+                i <-21
+        Fin Pour 
+        Afficer("Le plus rand est ",Plus)
+Fin
+
+
+
+/**********************************************/
+
+Exercice 9
+ 
+Debut
+    reponse,nbreNote,n,somme:entier
+    nbreNote <- somme <- 0
+    Faire
+        Afficer("Saisir la note")
+        Saisir(n)
+        nbreNote++
+        somme <- n + somme
+        Afficer("Voulez-vous continuer ? Si oui tapez sur 1 sinon sur 2")
+    Tant que( reponse == 1)
+
+    Afficer("La moyenne est de",somm/nbreNote)
+Fin
+
+/**********************************************/
+Exercice 10
+
+Debut
+    taille,positifs,negatifs:entier
+    positifs <- negatifs <- 0
+    Afficer("Donner la taillle du tableau")
+    Saisir(taille)
+    Pour (i allant de 0 jusquà taille-1 ) Faire
+        Saisir(taille[i])
+        Si taille[i] < 0 Alors
+            negatifs++
+         Sinon Si taille[i] > 0 Alors
+            positifs++
+        FinSi
+    Fin Pour
+    Afficer("On",positifs ,"nombres positifs et",negatifs,"nombres negatifs")    
+Fin
+
+
+
+/**************************************/
+
+Exercice 11
+
+Debut
+
+    a,b,reste,quotientEntier,quotientReel:entier
+    Afficer("Donner deux entier a et b")
+    Saisir(a,b)
+
+    quotientEntier <- a//b
+    quotientReel <- a/b
+    reste <- a - b*quotientEntier
+
+    Afficer("Le quotient enTier est:",quotientEntier)
+    Afficer("Le quotient réel est:",quotientReel)
+    Afficer("Le reste est",reste)
+
+Fin
+
+
+/*********************/
+
+Exercice 12
+
+Debut
+    n,somme:entier
+    somme <- 0
+    Afficer("Donner 5 nombres dont la somme sera retournée")
+    Pour(i allant de 1 à 5 ) Faire
+        Saisir(n)
+        somme <- somme + n
+    Fin Pour   
+    Afficer("La somme est de:",somme) 
+Fin
+
+
+/*************************************/
+
+Exercice 13
+
+Debut
+    a,b,c,x0,x1,x2,delta:réel
+    Afficer("Donnez le quotient a , b et c de l'equation du second derés à resoudre")
+    Saisir(a,b,c)
+    delta <- b*b - 4*a*c
+    Si delta > 0 Alors
+        x1 <- (-b-rqst(delta))/2*a
+        x2 <- (-b+rqst(delta))/2*a
+        Afficer("Les solutios sont :",x1,"et",x2)
+    
+     Sinon Si delta == 0 
+        x0 <- -b/2*a
+        Afficer("L'unique solution est", x0)
+     Sinon 
+        Afficer(Pas de solution réelle)
+    Fin Si       
+Fin
+
+
+/**********************************/
+
+Exercice 14
+
+Debut
+    a,b:réel
+    Afficer("Saisir le nombe a")
+    Saisir(a)
+
+
+
+
+Fin
+
+
+
+/*****************************************/
+
+Exercice 15
+
+Debut
+    jour,mois,annee:entier    
+    Afficer("Saisir respectivement le jour , le mois et l'année ")
+    Saisir(jour,mois, annee)
+    Si mod(annee,4)==0 
+        Si mod(annee,100)==0
+                Si mod(annee,400)==0 Alors
+                     Afficer("l'année est bissextile")
+                sinon
+                    Afficer("l'année n'est pas bissextile")
+        Sinon
+            Afficer("l'année n'est pas bissextile")
+    Sinon 
+        Afficer("l'année n'est pas bissextile")    
+Fin
+
+
+/*******************************************/
+
+EXERCICE 16
+
+Debut
+
+    aDeviner,nombre:reel
+    aDeviner <- random()
+    Afficer("Deviner le nombre")
+    Saisir(nombre)
+    Tant nombre != aDeviner Faire
+        Si nombre < aDeviner Alors
+            Afficer("Plus rand")
+        Sinon 
+            Afficer("Plus petit")    
+    Fin Tant que
+    Afficer("Bravo")
+Fin
+
+/**********************************/
+
+Exercice 18
+
+Debut
+
+    croissant,decroissant:enier
+    tampon,n:réel
+    croissant <- decroissant <- 0
+    Afficer("Saisr le nombre")
+    Saisir(n)
+    tampon <- n
+    Faire 
+        Afficer("Saisr le nombre")
+        Saisir(n)
+        Si tampon < n
+            decroissant++
+        Sinon
+            croissant++
+        FinSi
+        Afficer("Cliquez sur 1 si vous voulez continuer")        
+    Tant que(continuer==1)
+    Si croissant==0 Alors
+        Afficer ("La suite est croissante")
+    Sinon Si decroissant == 0 Alors
+        Afficer("LA suite est decroissante")   
+    Sinon
+        Afficer("La suite est quelconque")     
+Fin
